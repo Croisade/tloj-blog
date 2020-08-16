@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ThemeProvider } from '@material-ui/core/styles'
 import App from './app'
+import theme from './theme'
 
-import 'normalize.css/normalize.css'
-import '@blueprintjs/core/lib/css/blueprint.css'
-import '@blueprintjs/icons/lib/css/blueprint-icons.css'
-
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<ThemeProvider theme={theme}><App /></ThemeProvider>, document.getElementById('root'))
