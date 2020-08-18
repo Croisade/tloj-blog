@@ -4,13 +4,13 @@ import Container from '@material-ui/core/Container'
 import About from './components/pages/About'
 import Nav from './components/nav'
 import Home from './components/pages/Home'
-import { sections } from './data/data'
+import { sections, tlojHeader } from './data/data'
 
 const App = () => (
   <Router>
     <div className="app">
       <Container maxWith="lg">
-        <Nav sections={sections} />
+        <Nav sections={sections} tlojHeader={tlojHeader} />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
