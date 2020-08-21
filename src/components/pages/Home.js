@@ -1,9 +1,11 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import BlogHeader from '../blog/BlogHeader'
-import { mainFeaturedPost, featuredPosts } from '../../data/data'
+import { mainFeaturedPost, featuredPosts, aboutContent } from '../../data/data'
 
 import FeaturedPost from '../blog/SubContent'
+import AboutContent from '../blog/HeaderContent'
+import HomeLinks from '../blog/HomeLinks'
 
 function Home() {
   return (
@@ -14,6 +16,8 @@ function Home() {
           <FeaturedPost key={post.title} post={post} />
         ))}
       </Grid>
+      <AboutContent aboutContent={aboutContent} />
+      <HomeLinks />
     </div>
   )
 }

@@ -39,7 +39,7 @@ module.exports = {
         loaders: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(ttf|eot|svg)$/,
+        test: /\.(ttf|eot|svg|jpe?g)$/,
         use: {
           loader: 'file-loader',
           options: {
