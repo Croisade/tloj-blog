@@ -2,11 +2,9 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
-import CardMedia from '@material-ui/core/CardMedia'
 import { makeStyles } from '@material-ui/core/styles'
 
-import img from '../../static/jamalfacecrop.jpeg'
-import { homeLinks, techLinks } from '../../data/data'
+import { homeLinks } from '../../data/data'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,15 +32,21 @@ const useStyles = makeStyles(theme => ({
 
 function HeaderContent() {
   const classes = useStyles()
+  console.log(homeLinks.links)
 
   return (
     <Grid container spacing={1} className={classes.control}>
-      {homeLinks.map(content => (
-        <Grid item>
+      {homeLinks.map((content, index) => (
+        <div key={index}>
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="body2" paragraph align="center"> {content.title} </Typography>
+            {homeLinks.content.map((c, i) => (
+              <div key={i}>
+                <Typography> {c.title} </Typography>
+              </div>
+            ))}
           </Paper>
-        </Grid>
+        </div>
       ))}
     </Grid>
   )

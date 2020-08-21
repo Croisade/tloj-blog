@@ -64,22 +64,53 @@ export const techLinks = [
   },
 ]
 
+export const politicalLinks = [
+  {
+    title: 'Is Dummyrats good?',
+    link: '#',
+  },
+  {
+    title: 'Is redumblicans good?',
+    link: '#',
+  },
+]
 
+export const healthLinks = [
+  {
+    title: 'Is steroids good?',
+    link: '#',
+  },
+  {
+    title: 'Is mcdonalds good?',
+    link: '#',
+  },
+]
+
+export const animeLinks = [
+  {
+    title: 'Is boruto good?',
+    link: '#',
+  },
+  {
+    title: 'Is bleach good?',
+    link: '#',
+  },
+]
 export const homeLinks = [
   {
     title: 'Technology',
-    links: techLinks,
+    content: techLinks,
   },
   {
     title: 'Politics',
-    links: techLinks,
+    content: politicalLinks,
   },
   {
     title: 'Health',
-    links: techLinks,
+    content: healthLinks,
   },
   {
     title: 'Anime',
-    links: techLinks,
+    links: animeLinks,
   },
 ]
